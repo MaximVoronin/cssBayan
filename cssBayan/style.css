@@ -2,48 +2,51 @@
     font-weight: 700;
 }
 .container-mem{
-max-width: 1440px;
+max-width: 100%;
 margin: 0 auto;
 
 
 box-sizing: border-box;
-line-height: 18px;
+line-height: 0.1%;
 
 }
 
 h1{text-align: center}
-p{margin: 0px 0px;}
+p{margin: 0.1% 0.1%;}
 img{
   animation-name: Appearance;
-  animation-duration: 0.3s;
+  animation-duration: 0.8s;
   animation-timing-function: cubic-bezier(.3,-.4,.1,0);
+  transition: opacity 1s, visibility 0s 1s;
 }
 @-webkit-keyframes Appearance {
     0% {opacity: 0;}
+    50% {opacity: 5;}
     100% {opacity: 1;}
   }
   @keyframes Appearance {
     0% {opacity: 0;}
+    50% {opacity: 5;}
     100% {opacity: 1;}
   }
 
 .box-2 {
-    max-width: 500px;
-    margin: 30px auto;
-    border: 1px solid #155668;
-    margin-bottom: 5px;
+    max-width: 50%;
+    margin: 15px auto;
+    border: 0.1rem solid #155668;
+    margin-bottom: 0.01rem;
 }
 
 
 .title2-box{
 display: block;
-font-size: 15px;
+font-size: 1rem;
 font-weight: 700;
-padding: 10px 15px;
+padding: 1rem 1rem;
 cursor: pointer;
-transition: background .2s ease-out;
+transition: background .5s ease-out;
 position: relative;
-padding: 5px 15px;
+
 align-items: center;
 color: blue;
 
@@ -55,18 +58,19 @@ color: blue;
     
 }
 .input-mem {
-    width: 0px;
-    height: 0px;
+    width: 0%;
+    height: 0%;
     appearance: none;
     position: absolute;
    
 }
 .input-mem:checked ~ .title2-box {
     color: black;
+
 }
-.title2-box:hover {
-    background-color: #155668;
-   
+.title2-box:hover ~ .accord2-mem{
+    display: block;
+    webkit-transition: 4s;
 	
     
 	
@@ -74,7 +78,8 @@ color: blue;
 }
 .input-mem:checked  ~.accord2-mem {
     display: block;
-    
+   transition: 3s; 
+
 }
 
 .title2-box::after {
@@ -86,7 +91,7 @@ color: blue;
 	height: 15px;
     right: 15px;
 	-webkit-transition: 4s;
-    transition: .4s;
+    transition: .6s;
     margin-top: -7px;
     background-image: url(/cssBayan/cssBayan/assets/svg/Plus_icon-icons.com_71848.svg);
     
@@ -98,20 +103,18 @@ input-mem:checked ~ .title2-box::after {
 
 }
 
----input[type="radio"]:checked + .title2-box::after {
-    transform: rotate(30deg);
-    transition: 3s;
-}
 
-title2-box:active {
-    background-image: url(/cssBayan/cssBayan/assets/svg/cross_icon-icons.com_72347.svg);
+
+
+.title2-box:hover + .input-mem:checked{
+    display: block;
 }
  --p:hover{
     color: black;
 
 }
 
-.container-mem:hover {
+--container-mem:hover {
     color: black;
     
 }
@@ -138,7 +141,7 @@ title2-box:active {
 
     }
     h1 {font-size: 20px;}
-    img{max-width: 48%;
+    img{max-width: 80%;
 
     }
 }
@@ -153,7 +156,8 @@ title2-box:active {
         font-size: 10px;
     }
     h1 {font-size: 15px;}
-    img{max-width: 25%;
-        min-width: 320px;
+    img{max-width: 50%;
+        min-width: 100%;
+        max-height: 50%;
 }
 }
