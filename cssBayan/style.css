@@ -1,0 +1,147 @@
+.title-mem {
+    font-weight: 700;
+}
+.container-mem{
+max-width: 100%;
+margin: 0 auto;
+
+
+box-sizing: border-box;
+line-height: 0.1%;
+
+}
+
+h1{text-align: center}
+p{margin: 0.1% 0.1%;}
+img{
+  animation-name: Appearance;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(.3,-.4,.1,0);
+  transition: opacity 1s, visibility 0s 1s;
+}
+@-webkit-keyframes Appearance {
+    0% {opacity: 0;}
+    50% {opacity: 5;}
+    100% {opacity: 1;}
+  }
+  @keyframes Appearance {
+    0% {opacity: 0;}
+    50% {opacity: 5;}
+    100% {opacity: 1;}
+  }
+  
+.box-2 {
+    max-width: 50%;
+    margin: 0.5% auto;
+    border: 0.1rem solid #152468;
+    margin-bottom: 0.01rem;
+    border-radius: 0.5rem;
+}
+
+
+.title2-box{
+display: block;
+font-size: 1rem;
+font-weight: 700;
+padding: 1rem 1rem;
+cursor: pointer;
+transition: background .5s ease-out;
+position: relative;
+
+align-items: center;
+color: rgb(76, 0, 255);
+
+}
+.accord2-mem {
+    display: none;
+    text-align: center;
+    
+    
+}
+.input-mem {
+    width: 0%;
+    height: 0%;
+    appearance: none;
+    position: absolute;
+    
+}
+.input-mem:checked ~ .title2-box {
+    color: black;
+    
+}
+.title2-box:hover ~ .accord2-mem{
+    display: block;
+    -webkit-transition: 4s;
+  
+    
+    
+}
+.input-mem:checked  ~.accord2-mem {
+    display: block;
+   
+   
+
+}
+
+.title2-box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 15px;
+	height: 15px;
+    right: 15px;
+	-webkit-transition: 2s;
+    background-size: contain;
+    transition: 2s;
+    margin-top: -7px;
+    background-image: url(/cssBayan/cssBayan/assets/svg/Plus_icon-icons.com_71848.svg);
+    
+}
+
+.input-mem:checked ~ .title2-box::after {
+
+    background-image: url(/cssBayan/cssBayan/assets/svg/cross_icon-icons.com_72347.svg);
+   
+    
+
+}
+
+.title2-box,.p:hover{
+    color: rgb(42, 79, 182); 
+    
+    
+}
+
+/*----------Media Tablet----------*/
+@media (max-width:1180px){
+    .container-mem{
+        max-width: 1180px;
+        
+    }
+    .title2-box{ 
+        font-size: 13px;
+        line-height: 12px;
+
+    }
+    h1 {font-size: 20px;}
+    img{max-width: 80%;
+
+    }
+}
+
+/*-----------Media Mobile----------*/
+@media (max-width:568px){
+    .container-mem{
+        max-width: 568px;
+        
+    }
+    .title2-box{ 
+        font-size: 10px;
+    }
+    h1 {font-size: 15px;}
+    img{max-width: 50%;
+        min-width: 100%;
+        max-height: 50%;
+}
+}
