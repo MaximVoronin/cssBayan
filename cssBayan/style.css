@@ -12,15 +12,11 @@ line-height: 18px;
 }
 
 h1{text-align: center}
-P { text-align: center }
+p{margin: 0px 0px;}
 
 
 
-.box-1 {
-    line-height: 18px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .box-2 {
     max-width: 500px;
     margin: 30px auto;
@@ -36,21 +32,115 @@ font-weight: 700;
 padding: 10px 15px;
 cursor: pointer;
 transition: background .2s ease-out;
+position: relative;
+padding: 5px 15px;
+align-items: center;
+color: blue;
+
 }
 .accord2-mem {
     display: none;
     text-align: center;
+    
+    
 }
 .input-mem {
     width: 0px;
     height: 0px;
     appearance: none;
     position: absolute;
+   
 }
 .title2-box:hover {
     background-color: #155668;
+   
+	
+    
+	
+   
 }
 .input-mem:checked + .accord2-mem {
     display: block;
+    
 }
 
+.title2-box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 15px;
+	height: 15px;
+    right: 15px;
+	-webkit-transition: 4s;
+    transition: .4s;
+    margin-top: -7px;
+    background-image: url(/cssBayan/cssBayan/assets/svg/Plus_icon-icons.com_71848.svg);
+    
+}
+
+input-mem:checked + .title2-box::after {
+    background-image: url(/cssBayan/cssBayan/assets/svg/cross_icon-icons.com_72347.svg);
+
+
+}
+
+---input[type="radio"]:checked + .title2-box::after {
+    transform: rotate(30deg);
+    transition: 3s;
+}
+
+title2-box:active {
+    background-image: url(/cssBayan/cssBayan/assets/svg/cross_icon-icons.com_72347.svg);
+}
+ --p:hover{
+    color: black;
+
+}
+
+.container-mem:hover {
+    color: black;
+    
+}
+
+--p.text:hover{
+    color: black;
+
+}
+--block p + .text:hover {
+    color: black; 
+}
+-*-p.text:hover {
+    color: black; 
+}
+/*----------Media Tablet----------*/
+@media (max-width:1180px){
+    .container-mem{
+        max-width: 1180px;
+        
+    }
+    .title2-box{ 
+        font-size: 13px;
+        line-height: 12px;
+
+    }
+    h1 {font-size: 20px;}
+    img{max-width: 48%;
+
+    }
+}
+
+/*-----------Media Mobile----------*/
+@media (max-width:568px){
+    .container-mem{
+        max-width: 568px;
+        
+    }
+    .title2-box{ 
+        font-size: 10px;
+    }
+    h1 {font-size: 15px;}
+    img{max-width: 25%;
+        min-width: 320px;
+}
+}
