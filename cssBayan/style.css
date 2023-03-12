@@ -29,12 +29,13 @@ img{
     50% {opacity: 5;}
     100% {opacity: 1;}
   }
-
+  
 .box-2 {
     max-width: 50%;
-    margin: 15px auto;
-    border: 0.1rem solid #155668;
+    margin: 0.5% auto;
+    border: 0.1rem solid #152468;
     margin-bottom: 0.01rem;
+    border-radius: 0.5rem;
 }
 
 
@@ -48,7 +49,7 @@ transition: background .5s ease-out;
 position: relative;
 
 align-items: center;
-color: blue;
+color: rgb(76, 0, 255);
 
 }
 .accord2-mem {
@@ -62,23 +63,23 @@ color: blue;
     height: 0%;
     appearance: none;
     position: absolute;
-   
+    
 }
 .input-mem:checked ~ .title2-box {
     color: black;
-
+    
 }
 .title2-box:hover ~ .accord2-mem{
     display: block;
-    webkit-transition: 4s;
-	
+    -webkit-transition: 4s;
+  
     
-	
-   
+    
 }
 .input-mem:checked  ~.accord2-mem {
     display: block;
-   transition: 3s; 
+   
+   
 
 }
 
@@ -90,45 +91,28 @@ color: blue;
     width: 15px;
 	height: 15px;
     right: 15px;
-	-webkit-transition: 4s;
-    transition: .6s;
+	-webkit-transition: 2s;
+    background-size: contain;
+    transition: 2s;
     margin-top: -7px;
     background-image: url(/cssBayan/cssBayan/assets/svg/Plus_icon-icons.com_71848.svg);
     
 }
 
-input-mem:checked ~ .title2-box::after {
+.input-mem:checked ~ .title2-box::after {
+
     background-image: url(/cssBayan/cssBayan/assets/svg/cross_icon-icons.com_72347.svg);
-
-
-}
-
-
-
-
-.title2-box:hover + .input-mem:checked{
-    display: block;
-}
- --p:hover{
-    color: black;
+   
+    
 
 }
 
---container-mem:hover {
-    color: black;
+.title2-box,.p:hover{
+    color: rgb(42, 79, 182); 
+    
     
 }
 
---p.text:hover{
-    color: black;
-
-}
---block p + .text:hover {
-    color: black; 
-}
--*-p.text:hover {
-    color: black; 
-}
 /*----------Media Tablet----------*/
 @media (max-width:1180px){
     .container-mem{
